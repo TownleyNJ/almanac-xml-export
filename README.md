@@ -4,7 +4,8 @@ Barebones, hideous Django project to take in an almanac database and export 50 s
 The project assumes that current almanac data has been ported into the Django project
 Once that's been completed, visiting 127.0.0.1:8000/check/ will begin a file creation and export process
 You won't see anything in the web browser, but in your console that's running the current Django server, you'll see progress information
-If something goes wrong, the project is still in debug mode, so you should be able to 
+If something goes wrong, the project is still in debug mode, so you should be able to check out the error console. 
+It's worth noting that the database I used had a crap-ton of invalid XML data in it. If this is the case, the function will run and generate XML, but it will be invalid, and won't pass through any parser worth its salt.
 
 #Structure
 There isn't much of one. The base URL calls a function in the xml_dump module called "check_states" which iterates through states.
